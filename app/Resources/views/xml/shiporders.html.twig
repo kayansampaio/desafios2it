@@ -1,0 +1,40 @@
+{% extends 'template.html.twig' %}
+
+{% block body %}
+    <div class="page-header">
+        <h1>Ship orders Details </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="list-group">
+                <li class="list-group-item"><b>Order ID:</b> {{ shiporders.getOrderid() }}</li>
+                <li class="list-group-item"><b>Person:</b> {{ shiporders.getName() }}</li>
+                <li class="list-group-item"><b>Address:</b> {{ shiporders.getAddress() }}</li>
+                <li class="list-group-item"><b>City:</b> {{ shiporders.getCity() }}</li>
+                <li class="list-group-item"><b>Coutry:</b> {{ shiporders.getCountry() }}</li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <table class="table table-bordered table-responsive">
+                <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Note</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for i in items %}
+                    <tr>
+                        <td>{{ i.getTitle() }}</td>
+                        <td>{{ i.getNote() }}</td>
+                        <td>{{ i.getQuantity() }}</td>
+                        <td>$ {{ i.getPrice() }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

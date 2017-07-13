@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: 3306
+    database_name: desafio_s2it
+    database_user: root
+    database_password: Root@123
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: c216e08d35ad38a216921aad01029af21e27ae66

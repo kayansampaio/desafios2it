@@ -1,0 +1,31 @@
+{% extends 'template.html.twig' %}
+
+{% block body %}
+    <div class="page-header">
+        <h1>Submissions Page</h1>
+    </div>
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>Person ID</th>
+                <th>Person Name</th>
+                <th>Phone 1</th>
+                <th>Phone 2</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in persons %}
+            <tr>
+                <td>{{ p.getPersonid() }}</td>
+                <td>{{ p.getPersonname() }}</td>
+                <td>{{ p.getPhone1() }}</td>
+                <td>{{ p.getPhone2() }}</td>
+                <td width="100">
+                    <a href="/shiporders/person/{{ p.getPersonid() }}" class="btn btn-success">View Shiporders</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

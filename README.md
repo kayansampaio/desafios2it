@@ -1,7 +1,8 @@
 desafio_s2it
 ============
 
-This application has the purpose, to allow the user to load two files in XML format, and that he can view them then.
+This application has the purpose, to allow the user 
+to load two files in XML format (people.xml and shiporders.xml Located at the root of this project), and that he can view them then.
 
 Requirements
 ============
